@@ -8,7 +8,7 @@
   * [jvm](./docs/b-4jvm.md)
 
 * 计算机基础
-
+  * [HTTP](./docs/HTTP.md)
   * [计算机网络](./docs/c-1计算机网络.md)
   * [数据结构](./docs/c-2数据结构.md)
   * [算法](./docs/c-3算法.md)
