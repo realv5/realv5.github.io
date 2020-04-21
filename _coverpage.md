@@ -3,6 +3,6 @@
 </p>
 <h1 align="center">docsify-demo</h1>
 
-[常用资源](https://shimo.im/docs/MuiACIg1HlYfVxrj/)
-[GitHub](https://github.com/Snailclimb/docsify-demo)
-[开始阅读](docs/b-1面试题总结-Java基础)
+[GitHub](https://github.com/realv5/realv5.github.io)
+[开始阅读](docs/HTTP)
+
