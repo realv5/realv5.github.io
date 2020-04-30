@@ -1,0 +1,1097 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>24. IntelliJ IDEA 配合 Maven 的一些要点 | 重要说明，看三遍</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+
+
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="gitbook/style.css">
+
+
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+
+
+
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+
+
+
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+
+
+
+
+
+
+
+    <link rel="next" href="./maven-java-web-project-introduce.html" />
+
+
+    <link rel="prev" href="./maven-project-introduce.html" />
+
+
+
+    </head>
+    <body>
+
+
+    <div class="book"
+        data-level="24"
+        data-chapter-title="24. IntelliJ IDEA 配合 Maven 的一些要点"
+        data-filepath="maven-skill-introduce.md"
+        data-basepath="."
+        data-revision="Mon May 07 2018 19:46:15 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+
+
+
+
+
+
+
+
+
+        <li class="chapter " data-level="0" data-path="index.html">
+
+
+                    <a href="./index.html">
+
+                        <i class="fa fa-check"></i>
+
+                        Introduction
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="1" data-path="introduce.html">
+
+
+                    <a href="./introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>1.</b>
+
+                        01. IntelliJ IDEA 介绍（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="2" data-path="about-this-tutorial.html">
+
+
+                    <a href="./about-this-tutorial.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>2.</b>
+
+                        02. 教程介绍（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="3" data-path="windows-install.html">
+
+
+                    <a href="./windows-install.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>3.</b>
+
+                        03. 安装环境：Windows
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="4" data-path="ubuntu-install.html">
+
+
+                    <a href="./ubuntu-install.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>4.</b>
+
+                        04. 安装环境：Ubuntu
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="5" data-path="mac-install.html">
+
+
+                    <a href="./mac-install.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>5.</b>
+
+                        05. 安装环境：Mac
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="6" data-path="install-summarize.html">
+
+
+                    <a href="./install-summarize.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>6.</b>
+
+                        06. 安装环境总结（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="7" data-path="first-run-wizard.html">
+
+
+                    <a href="./first-run-wizard.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>7.</b>
+
+                        07. 首次运行向导（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="8" data-path="installation-directory-introduce.html">
+
+
+                    <a href="./installation-directory-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>8.</b>
+
+                        08. 安装后生成的目录说明、VM 设置（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="9" data-path="interface-introduce.html">
+
+
+                    <a href="./interface-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>9.</b>
+
+                        09. UI 界面（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="10" data-path="theme-settings.html">
+
+
+                    <a href="./theme-settings.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>10.</b>
+
+                        10. UI 主题、字体、编辑区主题、文件编码修改、乱码问题（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="11" data-path="file-symbols-introduce.html">
+
+
+                    <a href="./file-symbols-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>11.</b>
+
+                        11. 常见各类文件类型图标（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="12" data-path="IntelliJ-IDEA-cache.html">
+
+
+                    <a href="./IntelliJ-IDEA-cache.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>12.</b>
+
+                        12. IntelliJ IDEA 搜索快的原因：索引（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="13" data-path="make-introduce.html">
+
+
+                    <a href="./make-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>13.</b>
+
+                        13. Java 文件编译方式（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="14" data-path="project-composition-introduce.html">
+
+
+                    <a href="./project-composition-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>14.</b>
+
+                        14. 项目相关概念（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="15" data-path="project-settings.html">
+
+
+                    <a href="./project-settings.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>15.</b>
+
+                        15. Hello World 的 Java 项目创建和项目配置文件
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="16" data-path="vcs-introduce.html">
+
+
+                    <a href="./vcs-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>16.</b>
+
+                        16. 版本控制讲解（SVN + Git）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="17" data-path="live-templates-introduce.html">
+
+
+                    <a href="./live-templates-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>17.</b>
+
+                        17. 实时代码模板
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="18" data-path="file-templates-introduce.html">
+
+
+                    <a href="./file-templates-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>18.</b>
+
+                        18. 文件代码模板
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="19" data-path="emmet-introduce.html">
+
+
+                    <a href="./emmet-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>19.</b>
+
+                        19. 前端代码模板：Emmet
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="20" data-path="postfix-completion-introduce.html">
+
+
+                    <a href="./postfix-completion-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>20.</b>
+
+                        20. 特殊代码模板：Postfix Completion
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="21" data-path="plugins-settings.html">
+
+
+                    <a href="./plugins-settings.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>21.</b>
+
+                        21. 插件相关功能
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="22" data-path="eclipse-java-web-project-introduce.html">
+
+
+                    <a href="./eclipse-java-web-project-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>22.</b>
+
+                        22. Eclipse 的 Java Web 项目环境搭建
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="23" data-path="maven-project-introduce.html">
+
+
+                    <a href="./maven-project-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>23.</b>
+
+                        23. Maven 结构项目搭建
+                    </a>
+
+
+        </li>
+
+        <li class="chapter active" data-level="24" data-path="maven-skill-introduce.html">
+
+
+                    <a href="./maven-skill-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>24.</b>
+
+                        24. IntelliJ IDEA 配合 Maven 的一些要点
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="25" data-path="maven-java-web-project-introduce.html">
+
+
+                    <a href="./maven-java-web-project-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>25.</b>
+
+                        25. Maven 的单模块 / 多模块 Spring MVC + Spring + Mybatis 项目（重点）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="26" data-path="maven-java-web-project-introduce2.html">
+
+
+                    <a href="./maven-java-web-project-introduce2.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>26.</b>
+
+                        26. Maven 的单模块 Spring MVC + Spring + Spring Data JPA 项目
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="27" data-path="maven-java-web-project-introduce3.html">
+
+
+                    <a href="./maven-java-web-project-introduce3.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>27.</b>
+
+                        27. Maven 的单模块 Spring Boot 项目
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="28" data-path="debug-introduce.html">
+
+
+                    <a href="./debug-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>28.</b>
+
+                        28. Debug 技巧
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="29" data-path="refactor-introduce.html">
+
+
+                    <a href="./refactor-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>29.</b>
+
+                        29. 重构技巧
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="30" data-path="database-introduce.html">
+
+
+                    <a href="./database-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>30.</b>
+
+                        30. 数据库管理工具
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="31" data-path="settings-introduce-1.html">
+
+
+                    <a href="./settings-introduce-1.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>31.</b>
+
+                        31. IntelliJ IDEA 常用细节设置-1
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="32" data-path="settings-introduce-2.html">
+
+
+                    <a href="./settings-introduce-2.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>32.</b>
+
+                        32. IntelliJ IDEA 常用细节设置-2
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="33" data-path="settings-introduce-3.html">
+
+
+                    <a href="./settings-introduce-3.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>33.</b>
+
+                        33. IntelliJ IDEA 常用细节设置-3
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="34" data-path="settings-introduce-4.html">
+
+
+                    <a href="./settings-introduce-4.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>34.</b>
+
+                        34. IntelliJ IDEA 常用细节设置-4
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="35" data-path="keymap-introduce.html">
+
+
+                    <a href="./keymap-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>35.</b>
+
+                        35. IntelliJ IDEA 常用快捷键讲解（Win + Linux）（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="36" data-path="keymap-mac-introduce.html">
+
+
+                    <a href="./keymap-mac-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>36.</b>
+
+                        36. IntelliJ IDEA 常用快捷键讲解（Mac）（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="37" data-path="keymap-win-mac.html">
+
+
+                    <a href="./keymap-win-mac.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>37.</b>
+
+                        37. 从 Windows 过度到 Mac 必备快捷键对照表（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="38" data-path="jrebel-setup.html">
+
+
+                    <a href="./jrebel-setup.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>38.</b>
+
+                        38. IntelliJ IDEA 的 Java 热部署插件 JRebel 安装及使用
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="39" data-path="remote-debugging.html">
+
+
+                    <a href="./remote-debugging.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>39.</b>
+
+                        39. IntelliJ IDEA 远程调试（Tomcat+Jetty）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="40" data-path="hotkey-alt-enter-introduce.html">
+
+
+                    <a href="./hotkey-alt-enter-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>40.</b>
+
+                        40. 最特殊的快捷键 Alt + Enter 介绍（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="41" data-path="plugins-develop.html">
+
+
+                    <a href="./plugins-develop.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>41.</b>
+
+                        41. IntelliJ IDEA 插件开发视频教程
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="42" data-path="this-tutorial-the-end.html">
+
+
+                    <a href="./this-tutorial-the-end.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>42.</b>
+
+                        42. 本教程总结
+                    </a>
+
+
+        </li>
+
+
+
+
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="https://www.jiagou1216.com" >重要说明，看三遍，架构师小跟班</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+
+
+                    <section class="normal" id="section-">
+
+                        <h1 id="intellij-idea-&#x914D;&#x5408;-maven-&#x7684;&#x4E00;&#x4E9B;&#x6280;&#x5DE7;">IntelliJ IDEA &#x914D;&#x5408; Maven &#x7684;&#x4E00;&#x4E9B;&#x6280;&#x5DE7;</h1>
+<h2 id="&#x73AF;&#x5883;">&#x73AF;&#x5883;</h2>
+<ul>
+<li>IntelliJ IDEA 2017.1</li>
+<li>Maven 3.3.9</li>
+<li>Nexus 3.2.1</li>
+</ul>
+<h2 id="&#x5B66;&#x4E60;&#x524D;&#x63D0;">&#x5B66;&#x4E60;&#x524D;&#x63D0;</h2>
+<ul>
+<li>&#x4E86;&#x89E3; Maven &#x914D;&#x7F6E;&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;</li>
+<li>&#x4E86;&#x89E3;&#x79C1;&#x6709;&#x4ED3;&#x5E93;&#xFF0C;&#x6BD4;&#x5982; nexus &#x7684;&#x4E00;&#x4E9B;&#x6982;&#x5FF5;</li>
+<li><strong>&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x628A; Maven &#x7684; settings.xml &#x6587;&#x4EF6;&#x540C;&#x65F6;&#x653E;&#x5728;&#xFF1A;<code>%USER_HOME%/.m2/settings.xml</code> &#x548C; <code>${maven.home}/conf/settings.xml</code> &#x4E24;&#x4E2A;&#x5730;&#x65B9;&#x3002;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x7EC8;&#x7AEF;&#x7684;&#x65F6;&#x5019;&#x9ED8;&#x8BA4;&#x53BB;&#x8C03;&#x7528;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x4E0B;&#x7684;</strong></li>
+</ul>
+<h3 id="maven-&#x4E2D;&#x7684;-profile">Maven &#x4E2D;&#x7684; profile</h3>
+<ul>
+<li>Maven &#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#x53EB;&#x505A;&#xFF1A;<code>profile</code>&#xFF0C;&#x5B83;&#x7684;&#x8BDE;&#x751F;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x6240;&#x9700;&#x7684;&#x4E0D;&#x540C;&#x53D8;&#x91CF;&#x3001;&#x914D;&#x7F6E;&#x7B49;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x6709;&#x4E86; profile&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x6FC0;&#x6D3B;&#x7684;&#x6761;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x4E0D;&#x540C;&#x6761;&#x4EF6;&#x4E0B;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</li>
+<li>profile &#x662F;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x6FC0;&#x6D3B;&#x591A;&#x4E2A; profile&#xFF0C;&#x65B9;&#x4FBF;&#x81EA;&#x7531;&#x7EC4;&#x5408;&#x3002;</li>
+<li>profile &#x4E00;&#x822C;&#x53EF;&#x4EE5;&#x5728;&#x4E09;&#x4E2A;&#x5730;&#x65B9;&#xFF1A;settings.xml&#xFF0C;pom.xml&#xFF0C;profiles.xml&#xFF08;&#x8FD9;&#x4E2A;&#x4E0D;&#x5E38;&#x7528;&#xFF09;</li>
+<li>&#x5728; settings.xml &#x4E0A;&#xFF0C;&#x4E00;&#x822C;&#x5927;&#x5BB6;&#x7528;&#x6765;&#x505A;&#x4ED3;&#x5E93;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x6BD4;&#x5982;&#x4EE5;&#x4E0B; settings.xml &#x4EE3;&#x7801;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-pi">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">settings</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span>
+          <span class="hljs-attribute">xmlns:xsi</span>=<span class="hljs-value">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+          <span class="hljs-attribute">xsi:schemaLocation</span>=<span class="hljs-value">&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">localRepository</span>&gt;</span>D:\maven\my_local_repository<span class="hljs-tag">&lt;/<span class="hljs-title">localRepository</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">pluginGroups</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">pluginGroups</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">proxies</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">proxies</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">profiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">profile</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">repositories</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">repository</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://192.168.1.73:8081/repository/maven-public/<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">releases</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">releases</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">snapshots</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">snapshots</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">repository</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">repositories</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">pluginRepositories</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">pluginRepository</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://192.168.1.73:8081/repository/maven-public/<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">releases</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">releases</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">snapshots</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">snapshots</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">pluginRepository</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">pluginRepositories</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">profile</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">profile</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>aliyun<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">repositories</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">repository</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>aliyun<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">releases</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">releases</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">snapshots</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">snapshots</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">repository</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">repositories</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">pluginRepositories</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">pluginRepository</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>aliyun<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">releases</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">releases</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">snapshots</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">snapshots</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">pluginRepository</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">pluginRepositories</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">profile</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">profiles</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">activeProfiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">activeProfile</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-title">activeProfile</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">activeProfiles</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">settings</span>&gt;</span>
+</code></pre>
+<ul>
+<li>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x4E2D; profile &#x5C31;&#x505A;&#x4E00;&#x4EF6;&#x4E8B;&#xFF1A;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x7684; profile&#xFF0C;&#x4E00;&#x4E2A;&#x662F; nexus &#x4ED3;&#x5E93;&#xFF0C;&#x4E00;&#x4E2A;&#x662F; aliyun &#x4ED3;&#x5E93;&#xFF0C;&#x9ED8;&#x8BA4;&#x6FC0;&#x6D3B;&#x7684;&#x662F; nexus &#x4ED3;&#x5E93;&#x3002;&#xFF08;activeProfiles&#xFF09;</li>
+<li>&#x5728; pom.xml &#x4E2D;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6765;&#x6FC0;&#x6D3B;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#xFF0C;&#x6BD4;&#x5982;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">profiles</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">profile</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>dev<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">properties</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">package.environment</span>&gt;</span>dev<span class="hljs-tag">&lt;/<span class="hljs-title">package.environment</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">activation</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">activeByDefault</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">activeByDefault</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">activation</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">build</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">resources</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">resource</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">directory</span>&gt;</span>src/main/resources<span class="hljs-tag">&lt;/<span class="hljs-title">directory</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">includes</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">include</span>&gt;</span>**/*<span class="hljs-tag">&lt;/<span class="hljs-title">include</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">includes</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">filtering</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">filtering</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">resource</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">resource</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">directory</span>&gt;</span>src/main/env/${package.environment}<span class="hljs-tag">&lt;/<span class="hljs-title">directory</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">includes</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">include</span>&gt;</span>**/*<span class="hljs-tag">&lt;/<span class="hljs-title">include</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">includes</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">filtering</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">filtering</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">resource</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">resources</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">finalName</span>&gt;</span>${project.artifactId}<span class="hljs-tag">&lt;/<span class="hljs-title">finalName</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">build</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">profile</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">profile</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>product<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">properties</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">package.environment</span>&gt;</span>product<span class="hljs-tag">&lt;/<span class="hljs-title">package.environment</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">activation</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">activeByDefault</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-title">activeByDefault</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">activation</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">build</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">resources</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">resource</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">directory</span>&gt;</span>src/main/resources<span class="hljs-tag">&lt;/<span class="hljs-title">directory</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">includes</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">include</span>&gt;</span>**/*<span class="hljs-tag">&lt;/<span class="hljs-title">include</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">includes</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">filtering</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">filtering</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">resource</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">resource</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">directory</span>&gt;</span>src/main/env/${package.environment}<span class="hljs-tag">&lt;/<span class="hljs-title">directory</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">includes</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">include</span>&gt;</span>**/*<span class="hljs-tag">&lt;/<span class="hljs-title">include</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">includes</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">filtering</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">filtering</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">resource</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">resources</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">finalName</span>&gt;</span>${project.artifactId}<span class="hljs-tag">&lt;/<span class="hljs-title">finalName</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">build</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">profile</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">profiles</span>&gt;</span>
+</code></pre>
+<ul>
+<li>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x4E2D; profile &#x5C31;&#x505A;&#x4E00;&#x4EF6;&#x4E8B;&#xFF1A;&#x6253;&#x5305;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; dev &#x6A21;&#x5F0F;&#xFF0C;&#x6253;&#x5305; src/main/env/dev &#x4E0B;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x9009;&#x62E9; product &#x5219;&#x6253;&#x5305; src/main/env/product &#x4E0B;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ul>
+<h3 id="intellij-idea-&#x4F7F;&#x7528;-maven-profile-&#x7684;&#x6848;&#x4F8B;">IntelliJ IDEA &#x4F7F;&#x7528; Maven Profile &#x7684;&#x6848;&#x4F8B;</h3>
+<ul>
+<li>&#x5728; IntelliJ IDEA &#x4E0A;&#x8C03;&#x7528; profile &#x7B80;&#x5355;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x52FE;&#x9009;&#x5BF9;&#x5E94;&#x7684;&#x590D;&#x9009;&#x6846;&#x5373;&#x53EF;&#xFF0C;&#x53EF;&#x4EE5;&#x591A;&#x9009;&#x3002;</li>
+</ul>
+<p><img src="images/xxii-f-maven-skill-introduce.jpg" alt="IntelliJ IDEA &#x914D;&#x5408; Maven &#x7684;&#x4E00;&#x4E9B;&#x6280;&#x5DE7;"></p>
+<ul>
+<li>&#x53EA;&#x4F7F;&#x7528; aliyun &#x4ED3;&#x5E93;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x914D;&#x7F6E; settings.xml&#xFF1A;</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-pi">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">settings</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span>
+          <span class="hljs-attribute">xmlns:xsi</span>=<span class="hljs-value">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+          <span class="hljs-attribute">xsi:schemaLocation</span>=<span class="hljs-value">&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">localRepository</span>&gt;</span>D:\maven\my_local_repository<span class="hljs-tag">&lt;/<span class="hljs-title">localRepository</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">pluginGroups</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">pluginGroups</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">proxies</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">proxies</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">profiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">profile</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>aliyun<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">repositories</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">repository</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>aliyun<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">releases</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">releases</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">snapshots</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">snapshots</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">repository</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">repositories</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">pluginRepositories</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">pluginRepository</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>aliyun<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">releases</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">releases</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">snapshots</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">snapshots</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">pluginRepository</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">pluginRepositories</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">profile</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">profiles</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">activeProfiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">activeProfile</span>&gt;</span>aliyun<span class="hljs-tag">&lt;/<span class="hljs-title">activeProfile</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">activeProfiles</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">settings</span>&gt;</span>
+</code></pre>
+<ul>
+<li>&#x4F7F;&#x7528; nexus + aliyun &#x4ED3;&#x5E93;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x914D;&#x7F6E; settings.xml&#xFF1A;</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-pi">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">settings</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span>
+          <span class="hljs-attribute">xmlns:xsi</span>=<span class="hljs-value">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+          <span class="hljs-attribute">xsi:schemaLocation</span>=<span class="hljs-value">&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">localRepository</span>&gt;</span>D:\maven\my_local_repository<span class="hljs-tag">&lt;/<span class="hljs-title">localRepository</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">pluginGroups</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">pluginGroups</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">proxies</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">proxies</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">profiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">profile</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">repositories</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">repository</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://192.168.1.73:8081/repository/maven-public/<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">releases</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">releases</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">snapshots</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">snapshots</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">repository</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">repositories</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">pluginRepositories</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">pluginRepository</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://192.168.1.73:8081/repository/maven-public/<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">releases</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">releases</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">snapshots</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">snapshots</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">pluginRepository</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">pluginRepositories</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">profile</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">profile</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>aliyun<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">repositories</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">repository</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>aliyun<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">releases</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">releases</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">snapshots</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">snapshots</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">repository</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">repositories</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">pluginRepositories</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">pluginRepository</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>aliyun<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">releases</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">releases</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">snapshots</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">enabled</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">snapshots</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">pluginRepository</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">pluginRepositories</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">profile</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">profiles</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">activeProfiles</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">activeProfile</span>&gt;</span>nexus<span class="hljs-tag">&lt;/<span class="hljs-title">activeProfile</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">activeProfiles</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">settings</span>&gt;</span>
+</code></pre>
+
+
+                    </section>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <a href="./maven-project-introduce.html" class="navigation navigation-prev " aria-label="Previous page: 23. Maven 结构项目搭建"><i class="fa fa-angle-left"></i></a>
+
+
+        <a href="./maven-java-web-project-introduce.html" class="navigation navigation-next " aria-label="Next page: 25. Maven 的单模块 / 多模块 Spring MVC + Spring + Mybatis 项目（重点）"><i class="fa fa-angle-right"></i></a>
+
+    </div>
+</div>
+
+
+<script src="gitbook/app.js"></script>
+
+
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+
+
+
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+
+
+
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+
+
+
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+
+    </body>
+
+</html>

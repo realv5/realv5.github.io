@@ -1,0 +1,900 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>18. 文件代码模板 | 重要说明，看三遍</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+
+
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="gitbook/style.css">
+
+
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+
+
+
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+
+
+
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+
+
+
+
+
+
+
+    <link rel="next" href="./emmet-introduce.html" />
+
+
+    <link rel="prev" href="./live-templates-introduce.html" />
+
+
+
+    </head>
+    <body>
+
+
+    <div class="book"
+        data-level="18"
+        data-chapter-title="18. 文件代码模板"
+        data-filepath="file-templates-introduce.md"
+        data-basepath="."
+        data-revision="Mon May 07 2018 19:46:15 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+
+
+
+
+
+
+
+
+
+        <li class="chapter " data-level="0" data-path="index.html">
+
+
+                    <a href="./index.html">
+
+                        <i class="fa fa-check"></i>
+
+                        Introduction
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="1" data-path="introduce.html">
+
+
+                    <a href="./introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>1.</b>
+
+                        01. IntelliJ IDEA 介绍（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="2" data-path="about-this-tutorial.html">
+
+
+                    <a href="./about-this-tutorial.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>2.</b>
+
+                        02. 教程介绍（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="3" data-path="windows-install.html">
+
+
+                    <a href="./windows-install.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>3.</b>
+
+                        03. 安装环境：Windows
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="4" data-path="ubuntu-install.html">
+
+
+                    <a href="./ubuntu-install.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>4.</b>
+
+                        04. 安装环境：Ubuntu
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="5" data-path="mac-install.html">
+
+
+                    <a href="./mac-install.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>5.</b>
+
+                        05. 安装环境：Mac
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="6" data-path="install-summarize.html">
+
+
+                    <a href="./install-summarize.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>6.</b>
+
+                        06. 安装环境总结（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="7" data-path="first-run-wizard.html">
+
+
+                    <a href="./first-run-wizard.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>7.</b>
+
+                        07. 首次运行向导（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="8" data-path="installation-directory-introduce.html">
+
+
+                    <a href="./installation-directory-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>8.</b>
+
+                        08. 安装后生成的目录说明、VM 设置（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="9" data-path="interface-introduce.html">
+
+
+                    <a href="./interface-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>9.</b>
+
+                        09. UI 界面（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="10" data-path="theme-settings.html">
+
+
+                    <a href="./theme-settings.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>10.</b>
+
+                        10. UI 主题、字体、编辑区主题、文件编码修改、乱码问题（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="11" data-path="file-symbols-introduce.html">
+
+
+                    <a href="./file-symbols-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>11.</b>
+
+                        11. 常见各类文件类型图标（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="12" data-path="IntelliJ-IDEA-cache.html">
+
+
+                    <a href="./IntelliJ-IDEA-cache.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>12.</b>
+
+                        12. IntelliJ IDEA 搜索快的原因：索引（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="13" data-path="make-introduce.html">
+
+
+                    <a href="./make-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>13.</b>
+
+                        13. Java 文件编译方式（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="14" data-path="project-composition-introduce.html">
+
+
+                    <a href="./project-composition-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>14.</b>
+
+                        14. 项目相关概念（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="15" data-path="project-settings.html">
+
+
+                    <a href="./project-settings.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>15.</b>
+
+                        15. Hello World 的 Java 项目创建和项目配置文件
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="16" data-path="vcs-introduce.html">
+
+
+                    <a href="./vcs-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>16.</b>
+
+                        16. 版本控制讲解（SVN + Git）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="17" data-path="live-templates-introduce.html">
+
+
+                    <a href="./live-templates-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>17.</b>
+
+                        17. 实时代码模板
+                    </a>
+
+
+        </li>
+
+        <li class="chapter active" data-level="18" data-path="file-templates-introduce.html">
+
+
+                    <a href="./file-templates-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>18.</b>
+
+                        18. 文件代码模板
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="19" data-path="emmet-introduce.html">
+
+
+                    <a href="./emmet-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>19.</b>
+
+                        19. 前端代码模板：Emmet
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="20" data-path="postfix-completion-introduce.html">
+
+
+                    <a href="./postfix-completion-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>20.</b>
+
+                        20. 特殊代码模板：Postfix Completion
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="21" data-path="plugins-settings.html">
+
+
+                    <a href="./plugins-settings.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>21.</b>
+
+                        21. 插件相关功能
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="22" data-path="eclipse-java-web-project-introduce.html">
+
+
+                    <a href="./eclipse-java-web-project-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>22.</b>
+
+                        22. Eclipse 的 Java Web 项目环境搭建
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="23" data-path="maven-project-introduce.html">
+
+
+                    <a href="./maven-project-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>23.</b>
+
+                        23. Maven 结构项目搭建
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="24" data-path="maven-skill-introduce.html">
+
+
+                    <a href="./maven-skill-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>24.</b>
+
+                        24. IntelliJ IDEA 配合 Maven 的一些要点
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="25" data-path="maven-java-web-project-introduce.html">
+
+
+                    <a href="./maven-java-web-project-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>25.</b>
+
+                        25. Maven 的单模块 / 多模块 Spring MVC + Spring + Mybatis 项目（重点）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="26" data-path="maven-java-web-project-introduce2.html">
+
+
+                    <a href="./maven-java-web-project-introduce2.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>26.</b>
+
+                        26. Maven 的单模块 Spring MVC + Spring + Spring Data JPA 项目
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="27" data-path="maven-java-web-project-introduce3.html">
+
+
+                    <a href="./maven-java-web-project-introduce3.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>27.</b>
+
+                        27. Maven 的单模块 Spring Boot 项目
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="28" data-path="debug-introduce.html">
+
+
+                    <a href="./debug-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>28.</b>
+
+                        28. Debug 技巧
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="29" data-path="refactor-introduce.html">
+
+
+                    <a href="./refactor-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>29.</b>
+
+                        29. 重构技巧
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="30" data-path="database-introduce.html">
+
+
+                    <a href="./database-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>30.</b>
+
+                        30. 数据库管理工具
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="31" data-path="settings-introduce-1.html">
+
+
+                    <a href="./settings-introduce-1.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>31.</b>
+
+                        31. IntelliJ IDEA 常用细节设置-1
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="32" data-path="settings-introduce-2.html">
+
+
+                    <a href="./settings-introduce-2.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>32.</b>
+
+                        32. IntelliJ IDEA 常用细节设置-2
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="33" data-path="settings-introduce-3.html">
+
+
+                    <a href="./settings-introduce-3.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>33.</b>
+
+                        33. IntelliJ IDEA 常用细节设置-3
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="34" data-path="settings-introduce-4.html">
+
+
+                    <a href="./settings-introduce-4.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>34.</b>
+
+                        34. IntelliJ IDEA 常用细节设置-4
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="35" data-path="keymap-introduce.html">
+
+
+                    <a href="./keymap-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>35.</b>
+
+                        35. IntelliJ IDEA 常用快捷键讲解（Win + Linux）（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="36" data-path="keymap-mac-introduce.html">
+
+
+                    <a href="./keymap-mac-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>36.</b>
+
+                        36. IntelliJ IDEA 常用快捷键讲解（Mac）（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="37" data-path="keymap-win-mac.html">
+
+
+                    <a href="./keymap-win-mac.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>37.</b>
+
+                        37. 从 Windows 过度到 Mac 必备快捷键对照表（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="38" data-path="jrebel-setup.html">
+
+
+                    <a href="./jrebel-setup.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>38.</b>
+
+                        38. IntelliJ IDEA 的 Java 热部署插件 JRebel 安装及使用
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="39" data-path="remote-debugging.html">
+
+
+                    <a href="./remote-debugging.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>39.</b>
+
+                        39. IntelliJ IDEA 远程调试（Tomcat+Jetty）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="40" data-path="hotkey-alt-enter-introduce.html">
+
+
+                    <a href="./hotkey-alt-enter-introduce.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>40.</b>
+
+                        40. 最特殊的快捷键 Alt + Enter 介绍（新用户必看）
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="41" data-path="plugins-develop.html">
+
+
+                    <a href="./plugins-develop.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>41.</b>
+
+                        41. IntelliJ IDEA 插件开发视频教程
+                    </a>
+
+
+        </li>
+
+        <li class="chapter " data-level="42" data-path="this-tutorial-the-end.html">
+
+
+                    <a href="./this-tutorial-the-end.html">
+
+                        <i class="fa fa-check"></i>
+
+                            <b>42.</b>
+
+                        42. 本教程总结
+                    </a>
+
+
+        </li>
+
+
+
+
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="https://www.jiagou1216.com" >重要说明，看三遍，架构师小跟班</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+
+
+                    <section class="normal" id="section-">
+
+                        <h1 id="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x4F7F;&#x7528;">&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x4F7F;&#x7528;</h1>
+<h2 id="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x4ECB;&#x7ECD;">&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x4ECB;&#x7ECD;</h2>
+<p>&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x4E3A;&#xFF1A;&#x6211;&#x4EEC;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x521B;&#x5EFA;&#x67D0;&#x4E9B;&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C31;&#x5DF2;&#x7ECF;&#x5728;&#x5BF9;&#x5E94;&#x8FD9;&#x4E9B;&#x65B0;&#x6587;&#x4EF6;&#x4E2D;&#x9884;&#x8BBE;&#x4E86;&#x4EE3;&#x7801;&#x5185;&#x5BB9;&#x3002;&#x56E0;&#x4E3A;&#x6587;&#x5B57;&#x8868;&#x8FBE;&#x90FD;&#x5E26;&#x6709;&#x70B9;&#x65E0;&#x529B;&#xFF0C;&#x6240;&#x4EE5;&#x4E0B;&#x9762;&#x7528; Gif &#x52A8;&#x6001;&#x56FE;&#x6765;&#x6F14;&#x793A;&#x3002;</p>
+<p><img src="images/xviii-a-file-and-code-templates-introduce-1.gif" alt="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x4ECB;&#x7ECD;"></p>
+<blockquote>
+<ul>
+<li>&#x5982;&#x4E0A;&#x56FE; Gif &#x6240;&#x793A;&#xFF0C;IntelliJ IDEA &#x9ED8;&#x8BA4;&#x65B0;&#x5EFA;&#x7C7B;&#x81EA;&#x5E26;&#x7684;&#x7C7B;&#x6CE8;&#x91CA;&#x683C;&#x5F0F;&#x4E00;&#x822C;&#x4E0D;&#x591F;&#x53CB;&#x597D;&#x6216;&#x662F;&#x89C4;&#x8303;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x6839;&#x636E;&#x516C;&#x53F8;&#x7F16;&#x7801;&#x89C4;&#x8303;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x3002;</li>
+</ul>
+</blockquote>
+<p><img src="images/xviii-a-file-and-code-templates-introduce-2.gif" alt="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x4ECB;&#x7ECD;"></p>
+<blockquote>
+<ul>
+<li>&#x5982;&#x4E0A;&#x56FE; Gif &#x6240;&#x793A;&#xFF0C;&#x8FD9;&#x662F;&#x6839;&#x636E;&#x6211;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x7684;&#x7C7B;&#x6CE8;&#x91CA;&#xFF0C;&#x8FD9;&#x79CD;&#x6CE8;&#x91CA;&#x65B9;&#x5F0F;&#x4F1A;&#x66F4;&#x53CB;&#x597D;&#x3002;</li>
+</ul>
+</blockquote>
+<p>&#x6839;&#x636E;&#x6F14;&#x793A;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5DF2;&#x7ECF;&#x5F88;&#x597D;&#x5730;&#x7406;&#x89E3;&#x4E86;&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x662F;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;&#x4E86;&#x3002;&#x5BF9;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x884D;&#x751F;&#x51FA;&#x5F88;&#x591A;&#x73A9;&#x6CD5;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x6211;&#x4EEC;&#x7684;&#x9879;&#x76EE; Controller&#x3001;Service&#x3001;Dao &#x7B49;&#x5E38;&#x7528;&#x65B0;&#x5BF9;&#x8C61;&#x90FD;&#x662F;&#x8981;&#x5404;&#x81EA;&#x7EE7;&#x627F;&#x67D0;&#x4E2A;&#x7C7B;&#x3001;&#x5B9E;&#x73B0;&#x67D0;&#x4E9B;&#x63A5;&#x53E3;&#x6216;&#x9884;&#x8BBE;&#x67D0;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<blockquote>
+<ul>
+<li>&#x5B98;&#x7F51;&#x4ECB;&#x7ECD;&#xFF1A;<a href="https://www.jetbrains.com/idea/help/file-and-code-templates.html" target="_blank">https://www.jetbrains.com/idea/help/file-and-code-templates.html</a></li>
+</ul>
+</blockquote>
+<h2 id="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x8BBE;&#x7F6E;">&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x8BBE;&#x7F6E;</h2>
+<p><img src="images/xviii-b-file-and-code-templates-settings-1.jpg" alt="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x8BBE;&#x7F6E;"></p>
+<blockquote>
+<ul>
+<li>&#x5982;&#x4E0A;&#x56FE;&#x6807;&#x6CE8; 1 &#x6240;&#x793A;&#xFF0C;&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x652F;&#x6301;&#x7684;&#x7C7B;&#x578B;&#x57FA;&#x672C;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x90FD;&#x6DB5;&#x76D6;&#x4E86;&#x3002;</li>
+<li>&#x5982;&#x4E0A;&#x56FE;&#x6807;&#x6CE8; 2 &#x6240;&#x793A;&#xFF0C;&#x8FD9;&#x662F; Java &#x6587;&#x4EF6;&#x6A21;&#x677F;&#x65B0;&#x5EFA;&#x7684;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#xFF0C;&#x5176;&#x4E2D; <code>${PACKAGE_NAME}&#x3001;${NAME}</code> &#x662F; IntelliJ IDEA &#x9884;&#x8BBE;&#x7684;&#x53D8;&#x91CF;&#x3002;</li>
+<li>&#x5982;&#x4E0A;&#x56FE;&#x6807;&#x6CE8; 3 &#x6240;&#x793A;&#xFF0C;IntelliJ IDEA &#x7684;&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x662F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>Velocity Template Language</code> (VTL) &#x8FDB;&#x884C;&#x4E66;&#x5199;&#x7684;&#x3002;&#x5982;&#x56FE; 2 &#x4E0A;&#x7684; <code>#if ... #end</code> &#x548C; <code>#parse</code> &#x90FD;&#x662F; VTL &#x7684;&#x8BED;&#x6CD5;&#x3002;</li>
+<li>&#x5982;&#x4E0A;&#x56FE;&#x6807;&#x6CE8; 4 &#x6240;&#x793A;&#xFF0C;&#x4ECB;&#x7ECD;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x6A21;&#x677F;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x9884;&#x8BBE;&#x53D8;&#x91CF;&#x7684;&#x4F5C;&#x7528;&#x4ECB;&#x7ECD;&#x3002;</li>
+<li>&#x5982;&#x4E0A;&#x56FE;&#x6807;&#x6CE8; 5 &#x6240;&#x793A;&#xFF0C;&#x8FD9;&#x56DB;&#x4E2A;&#x6309;&#x94AE;&#x662F;&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x4E3B;&#x8981;&#x64CD;&#x4F5C;&#x6309;&#x94AE;&#xFF0C;&#x56DB;&#x4E2A;&#x64CD;&#x4F5C;&#x5206;&#x522B;&#x662F;&#xFF1A;</li>
+</ul>
+<blockquote>
+<ul>
+<li><code>Create Template</code> &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x3002; </li>
+<li><code>Remove Template</code> &#x5220;&#x9664;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#xFF0C;&#x6807;&#x6CE8; 1 &#x6240;&#x793A;&#x7684;&#x8FD9;&#x4E9B;&#x9884;&#x8BBE;&#x6A21;&#x677F;&#x662F;&#x4E0D;&#x5141;&#x8BB8;&#x5220;&#x9664;&#x7684;&#xFF0C;&#x53EA;&#x80FD;&#x80FD;&#x5220;&#x9664;&#x9884;&#x8BBE;&#x4E4B;&#x5916;&#x7684;&#x65B0;&#x589E;&#x7684;&#x3002;</li>
+<li><code>Copy Template</code> &#x590D;&#x5236;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x3002; </li>
+<li><code>Reset To Default</code> &#x5BF9;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x9884;&#x8BBE;&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#xFF0C;&#x8FD8;&#x539F;&#x5230;&#x9ED8;&#x8BA4;&#x72B6;&#x6001;&#x3002;</li>
+</ul>
+</blockquote>
+</blockquote>
+<p><img src="images/xviii-b-file-and-code-templates-settings-7.gif" alt="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x8BBE;&#x7F6E;"></p>
+<blockquote>
+<ul>
+<li>&#x5982;&#x4E0A;&#x56FE; Gif &#x6F14;&#x793A;&#xFF0C;IntelliJ IDEA &#x9ED8;&#x8BA4;&#x662F;&#x6CA1;&#x6709;&#x63D0;&#x4F9B; XML &#x6587;&#x4EF6;&#x7684;&#x521B;&#x5EFA;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x81EA;&#x5DF1;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;&#xFF1A;<code>YouMeek XML</code> &#x7684;&#x6587;&#x4EF6;&#x6A21;&#x677F;&#xFF0C;&#x8BE5;&#x6A21;&#x677F;&#x540E;&#x7F00;&#x4E3A;&#xFF1A;<code>xml</code>&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x521D;&#x59CB;&#x5316;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;<code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</code>&#x3002;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5185;&#x5BB9;&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x8FDB;&#x884C;&#x8865;&#x5145;&#x3002;</li>
+</ul>
+</blockquote>
+<p><img src="images/xviii-b-file-and-code-templates-settings-2.jpg" alt="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x8BBE;&#x7F6E;"></p>
+<blockquote>
+<ul>
+<li>&#x5982;&#x4E0A;&#x56FE;&#x6807;&#x6CE8; 1 &#x6240;&#x793A;&#xFF0C;IntelliJ IDEA &#x8FD8;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x5E38;&#x89C1;&#x4F1A;&#x65B0;&#x5EFA;&#x7684;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x6211;&#x4EEC;&#x6839;&#x672C;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x6709;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x57FA;&#x672C;&#x90FD;&#x88AB;&#x6DB5;&#x76D6;&#x4E86;&#x3002;</li>
+</ul>
+</blockquote>
+<p><img src="images/xviii-b-file-and-code-templates-settings-3.jpg" alt="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x8BBE;&#x7F6E;"></p>
+<blockquote>
+<ul>
+<li>&#x5982;&#x4E0A;&#x56FE;&#x6807;&#x6CE8; 1 &#x6240;&#x793A;&#xFF0C;&#x8BE5; <code>File Header</code> &#x6587;&#x4EF6;&#x5C31;&#x662F;&#x524D;&#x9762; Java &#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x4E2D;&#x5F15;&#x5165;&#x8BED;&#x53E5;&#x4E2D; <code>#parse(&quot;File Header.java&quot;)</code> &#x6587;&#x4EF6;&#x3002;</li>
+</ul>
+</blockquote>
+<p><img src="images/xviii-b-file-and-code-templates-settings-4.jpg" alt="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x8BBE;&#x7F6E;"></p>
+<blockquote>
+<ul>
+<li>&#x5982;&#x4E0A;&#x56FE;&#x6807;&#x6CE8;&#x7BAD;&#x5934;&#x6240;&#x793A;&#xFF0C;<code>${DESCRIPTION}</code> &#x662F;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x683C;&#x5F0F;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;<code>$&#x53D8;&#x91CF;&#x540D; &#x6216; ${&#x53D8;&#x91CF;&#x540D;}</code>&#x3002;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x5728;&#x521B;&#x5EFA;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x65F6;&#x5019;&#x5C31;&#x5FC5;&#x987B;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#xFF0C;&#x8FD9;&#x4E2A;&#x5728;&#x672C;&#x6587;&#x6700;&#x4E0A;&#x9762;&#x7684; Gif &#x6F14;&#x793A;&#x4E2D;&#x5DF2;&#x7ECF;&#x6709;&#x4F53;&#x73B0;&#x4E86;&#x3002;</li>
+</ul>
+</blockquote>
+<p><img src="images/xviii-b-file-and-code-templates-settings-5.gif" alt="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x8BBE;&#x7F6E;"></p>
+<blockquote>
+<ul>
+<li>&#x5982;&#x4E0A;&#x56FE; Gif &#x6240;&#x793A;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x5230;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x503C;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x7684;&#x65F6;&#x5019;&#x5E76;&#x4E14;&#x8BE5;&#x53D8;&#x91CF;&#x591A;&#x4E2A;&#x5730;&#x65B9;&#x88AB;&#x5F15;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; VTL &#x8BED;&#x6CD5;&#x7684; <code>#set( $&#x53D8;&#x91CF;&#x540D; = &quot;&#x53D8;&#x91CF;&#x503C;&#x5185;&#x5BB9;&quot; );</code> &#x6765;&#x8BBE;&#x7F6E;&#x3002;</li>
+</ul>
+</blockquote>
+<p><img src="images/xviii-b-file-and-code-templates-settings-6.jpg" alt="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x7684;&#x8BBE;&#x7F6E;"></p>
+<blockquote>
+<ul>
+<li>&#x56E0;&#x4E3A; <code>Code</code> &#x6A21;&#x5757;&#x6539;&#x52A8;&#x7684;&#x4EBA;&#x4E0D;&#x591A;&#xFF0C;&#x6240;&#x4EE5;&#x653E;&#x5728;&#x6700;&#x540E;&#x3002;&#x6211;&#x4EEC;&#x662F;&#x65E0;&#x6CD5;&#x65B0;&#x5EFA;&#x3001;&#x5220;&#x9664; <code>Code</code> &#x91CC;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x3002;</li>
+<li>&#x5982;&#x4E0A;&#x56FE;&#x6807;&#x6CE8; 1 &#x6240;&#x793A;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;&#x751F;&#x6210;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;&#x65F6;&#x5019;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x6B64; <code>Code</code> &#x6A21;&#x677F;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x89E3;&#x91CA;&#x8BE5; <code>Code</code> &#x529F;&#x80FD;&#x4E3B;&#x8981;&#x7528;&#x5728; IntelliJ IDEA &#x81EA;&#x52A8;&#x5E2E;&#x6211;&#x4EEC;&#x751F;&#x6210;&#x67D0;&#x4E9B;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#x5F15;&#x7528;&#x7684;&#x6A21;&#x677F;&#x3002;</li>
+</ul>
+</blockquote>
+<h2 id="&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x9884;&#x8BBE;&#x7684;&#x53D8;&#x91CF;">&#x6587;&#x4EF6;&#x4EE3;&#x7801;&#x6A21;&#x677F;&#x9884;&#x8BBE;&#x7684;&#x53D8;&#x91CF;</h2>
+<p>&#x56E0;&#x4E3A;&#x53D8;&#x91CF;&#x7684;&#x547D;&#x540D;&#x592A;&#x660E;&#x4E86;&#x4E0D;&#x8FC7;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x4E0D;&#x591A;&#x8BB2;&#x89E3;&#xFF0C;&#x76F4;&#x63A5;&#x8D34;&#x51FA;&#x5B98;&#x7F51;&#x7684;&#x82F1;&#x6587;&#x89E3;&#x91CA;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li>${PACKAGE_NAME} - the name of the target package where the new class or interface will be created.</li>
+<li>${PROJECT_NAME} - the name of the current project.</li>
+<li>${FILE_NAME} - the name of the PHP file that will be created.</li>
+<li>${NAME} - the name of the new file which you specify in the New File dialog box during the file creation.</li>
+<li>${USER} - the login name of the current user.</li>
+<li>${DATE} - the current system date.</li>
+<li>${TIME} - the current system time.</li>
+<li>${YEAR} - the current year.</li>
+<li>${MONTH} - the current month.</li>
+<li>${DAY} - the current day of the month.</li>
+<li>${HOUR} - the current hour.</li>
+<li>${MINUTE} - the current minute.</li>
+<li>${PRODUCT_NAME} - the name of the IDE in which the file will be created.</li>
+<li>${MONTH_NAME_SHORT} - the first 3 letters of the month name. Example: Jan, Feb, etc.</li>
+<li>${MONTH_NAME_FULL} - full name of a month. Example: January, February, etc.</li>
+</ul>
+</blockquote>
+<p>PHP &#x7684;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x9884;&#x8BBE;&#x7684;&#x53D8;&#x91CF;&#x6BD4;&#x4E0A;&#x9762;&#x7684;&#x8FD8;&#x591A;&#x4E00;&#x70B9;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x67E5;&#x9605;&#x5B98;&#x7F51;&#xFF1A;</p>
+<blockquote>
+<ul>
+<li>&#x5B98;&#x7F51;&#x53D8;&#x91CF;&#x4ECB;&#x7ECD;&#xFF1A;<a href="https://www.jetbrains.com/idea/help/file-template-variables.html" target="_blank">https://www.jetbrains.com/idea/help/file-template-variables.html</a></li>
+</ul>
+</blockquote>
+
+
+                    </section>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <a href="./live-templates-introduce.html" class="navigation navigation-prev " aria-label="Previous page: 17. 实时代码模板"><i class="fa fa-angle-left"></i></a>
+
+
+        <a href="./emmet-introduce.html" class="navigation navigation-next " aria-label="Next page: 19. 前端代码模板：Emmet"><i class="fa fa-angle-right"></i></a>
+
+    </div>
+</div>
+
+
+<script src="gitbook/app.js"></script>
+
+
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+
+
+
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+
+
+
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+
+
+
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+
+    </body>
+
+</html>

@@ -1,5 +1,3 @@
-* [备战面试](./docs/a-1备战面试.md)
-  
 * Java
 
   * [Java基础](./docs/java/Java基础.md)
@@ -9,10 +7,7 @@
 * 计算机基础
 
   * [HTTP](./docs/computer/HTTP.md)
-  * [计算机网络](./docs/c-1计算机网络.md)
-  * [数据结构](./docs/c-2数据结构.md)
-  * [算法](./docs/c-3算法.md)
-  * [操作系统](./docs/c-4操作系统.md)
-
-* 开发环境
-  * [Idea操作](./docs/idea.md)
+  * [计算机网络](./docs/computer/远程通信.md)
+  * [数据结构](./docs/computer/数据结构.md)
+  * [算法](./docs/computer/算法.md)
+  * [操作系统](./docs/computer/操作系统.md)
