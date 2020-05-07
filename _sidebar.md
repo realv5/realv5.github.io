@@ -11,3 +11,6 @@
   * [数据结构](./docs/computer/数据结构.md)
   * [算法](./docs/computer/算法.md)
   * [操作系统](./docs/computer/操作系统.md)
+
+* Linux
+  * [Linux文件权限符](./docs/linux/Linux文件权限符.md) 
