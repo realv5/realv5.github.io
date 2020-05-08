@@ -14,3 +14,6 @@
 
 * Linux
   * [Linux文件权限符](./docs/linux/Linux文件权限符.md) 
+
+* MySql
+  * [MySql操作](./docs/mysql/mysql操作.md)
